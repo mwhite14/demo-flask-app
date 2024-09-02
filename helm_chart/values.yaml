@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  repository: 365290772959.dkr.ecr.us-east-2.amazonaws.com/flask_app
+  tag: latest
+  pullPolicy: IfNotPresent
+  port: 8080
+  
+service:
+  type: LoadBalancer
+  https_target_port: 8080
+  https_port: 443
+  http_target_port: 8080
+  http_port: 80
+  ssl_cert: <<update with arn for ssl cert>>
+  ssl_port: 443
+  backend_protocol: http
+  
+k8s_arch: amd64
+
+namespace: sporttrade_demo
