@@ -1,3 +1,3 @@
-Basic docker Flask app hosting an endpoint at https://hello.whitehead-demos.com/hello 
+Basic docker Hello World Flask app
 
 Deployed using helm
